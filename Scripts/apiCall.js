@@ -1,7 +1,7 @@
 async function getRandom() {
   //generates a "random" number from 1 to 1302
   // then fetches the data for the specified pokemon ID
-  var random = Math.floor(Math.random() * (1302 - 1) + 1);
+  var random = Math.floor(Math.random() * (1025 - 1) + 1);
 
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${random}/`);
   const data = await res.json();
@@ -36,4 +36,4 @@ async function getAll(min, max) {
 
 }
 
-exports = { getRandom, getById, getByName, getAll };
+export { getRandom, getById, getByName, getAll };

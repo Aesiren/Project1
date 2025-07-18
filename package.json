@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Project 1 for SDI 31",
   "main": "index.html",
+  "type": "module",
   "scripts": {
     "test": "test"
   },

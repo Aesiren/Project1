@@ -58,6 +58,9 @@ h2 {
   border: 3px;
   border-style: inset;
   border-color: #372fc0;
+  justify-self: center;
+  align-self: center;
+
 }
 
 button {

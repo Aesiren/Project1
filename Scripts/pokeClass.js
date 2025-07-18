@@ -1,15 +1,15 @@
 class pokeClass {
-  construct(data) {
-    this.baseXP = data["base_experience"];
-    this.height = data["height"];
-    this.id = data["id"];
-    this.moves = data["moves"];
-    this.name = data["name"];
-    this.sprite = data.sprites["front_default"];
-    this.stats = data["stats"];
-    this.weight = data["weight"];
+  constructor(rawData) {
+    this.baseXP = rawData.base_experience;
+    this.height = rawData.height;
+    this.id = rawData.id;
+    this.moves = rawData.moves;
+    this.name = rawData.name;
+    this.sprite = rawData.sprites["front_default"];
+    this.stats = rawData.stats;
+    this.weight = rawData.weight;
 
   }
-
-
 }
+
+export { pokeClass };
