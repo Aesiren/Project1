@@ -1,0 +1,19 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "Project 1 for SDI 31",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aesiren/Project1.git"
+  },
+  "author": "Evan Bonk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aesiren/Project1/issues"
+  },
+  "homepage": "https://github.com/Aesiren/Project1#readme"
+}
