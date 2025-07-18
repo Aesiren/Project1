@@ -1,0 +1,6 @@
+function apiCall(condition, id) {
+
+
+
+
+}
