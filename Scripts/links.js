@@ -1,5 +1,6 @@
 import { getRandom, getByName, getAll } from "./apiCall.js";
 import { pokeClass } from "./pokeClass.js";
+import { viewLoad } from "./view.js";
 
 
 
@@ -69,9 +70,8 @@ async function getMythic() {
 }
 
 function viewPage(dataToPass) {
+  viewLoad(dataToPass);
   window.location = "View_Pokemon.html";
-
-
 }
 
 
