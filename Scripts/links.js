@@ -1,6 +1,6 @@
 import { getRandom, getByName, getAll } from "./apiCall.js";
 import { pokeClass } from "./pokeClass.js";
-import { viewLoad } from "./view.js";
+import { viewLoad, viewRandom } from "./view.js";
 
 
 
@@ -18,7 +18,8 @@ btnLegend.addEventListener("click", () => {
 })
 
 btnRandom.addEventListener("click", () => {
-  viewPage(setRandom());
+  //document.location.href = "View_Pokemon.html";
+  viewPage(null);
 
 })
 
@@ -70,8 +71,16 @@ async function getMythic() {
 }
 
 function viewPage(dataToPass) {
-  viewLoad(dataToPass);
-  window.location = "View_Pokemon.html";
+  //window.location = "../Pages/View_Pokemon.html";
+  if (dataToPass === null) {
+    document.location.href = "View_Pokemon.html";
+    viewRandom();
+  } else {
+    viewLoad(dataToPass);
+
+  }
+
+
 }
 
 

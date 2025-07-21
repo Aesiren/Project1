@@ -1,13 +1,23 @@
-import { } from "./links.js";
-
-
-
-
+import { setRandom } from "./links.js";
 
 
 function viewLoad(data) {
-  document.getElementById("pic").innerHTML = `<img src=${data.sprite}></img>`;
-  document.getElementById("id").innerHTML = data.id;
+
+  //location = "../Pages/View_Pokemon.html";
+
+}
+
+async function viewRandom() {
+  //location = "../Pages/View_Pokemon.html";
+  var randomPoke = await setRandom();
+  console.log(randomPoke);
+  setPage(randomPoke);
+}
+
+function setPage(data) {
+  console.log(data);
+  document.getElementById("pic").src = `<img src=${data.sprite}></img>`;
+  document.getElementById("pokeId").innerHTML = data.id;
   document.getElementById("name").innerHTML = data.name;
   document.getElementById("baseXP").innerHTML = data.baseXP;
   document.getElementById("height").innerHTML = data.height;
@@ -15,4 +25,4 @@ function viewLoad(data) {
   document.getElementById("moves").innerHTML = data.moves;
 }
 
-export { viewLoad };
+export { viewLoad, viewRandom };

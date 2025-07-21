@@ -3,8 +3,10 @@
 
 <head>
   <link href="./index.css" rel="stylesheet">
+
   <meta charset="UTF-8" />
-  <title>title</title>
+
+  <title>Match Game</title>
   <div class="header">
     <h1>Match That Pokemon!</h1>
     <h2>Select Matching Tiles to Score. Beat the Time!</h2>
@@ -31,13 +33,39 @@
 
     </div>
 
-    <div class="main">
 
+    <div class="body">
+      <div>
+        <button id="newGame" type="button">New Game</button><br><br>
+        <label id="timeSpent"></label>
+        <span>
+          <h1 id="winner"></h1>
+        </span>
+        <label>Score: </label><label id="score">0</label><br>
+        <label id="timer"></label>
+      </div>
+
+      <div class="match_main">
+        <div id="0" class="match"></div>
+        <div id="1" class="match"></div>
+        <div id="2" class="match"></div>
+        <div id="3" class="match"></div>
+
+        <div id="4" class="match"></div>
+        <div id="5" class="match"></div>
+        <div id="6" class="match"></div>
+        <div id="7" class="match"></div>
+
+        <div id="8" class="match"></div>
+        <div id="9" class="match"></div>
+        <div id="10" class="match"></div>
+        <div id="11" class="match"></div>
+      </div>
     </div>
   </div>
 
 </body>
 <script src="../Scripts/links.js" type="module"></script>
-<script src="../Scripts/matching.js" type="module"></script>
+<script src="../Scripts/matching.js" type="module" type="text/javascript"></script>
 
 </html>

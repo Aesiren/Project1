@@ -1,5 +1,5 @@
 import { getStart, setRandom, getLegend, getMythic } from "./links.js";
-import { pokeClass } from "./pokeClass.js";
+//import { pokeClass } from "./pokeClass.js";
 
 
 window.onload = function () {
