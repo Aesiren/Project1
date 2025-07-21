@@ -1,4 +1,4 @@
-import { getStart, setRandom, getLegend, getMythic, viewPage } from "./links.js";
+import { setRandom, viewPage } from "./links.js";
 //import { pokeClass } from "./pokeClass.js";
 
 var gridTracker = document.querySelectorAll(".grid");
@@ -10,6 +10,7 @@ gridTracker.forEach((grid, index) => {
     viewPage(captured);
   })
 })
+
 window.onload = function () {
   onLoad(null);
   console.log("Page loaded");

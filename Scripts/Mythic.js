@@ -1,7 +1,14 @@
-import { setByName } from "./links.js";
+import { setByName, viewPage } from "./links.js";
 
-var boxElements = document.querySelectorAll("gridstart");
+var boxElements = document.querySelectorAll(".grid");
 
+boxElements.forEach((box, index) => {
+  box.addEventListener("click", () => {
+    var captured = box.textContent;
+    //console.log(captured);
+    viewPage(captured);
+  })
+})
 
 window.onload = function () {
   onLoad();
