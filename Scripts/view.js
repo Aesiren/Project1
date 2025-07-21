@@ -1,8 +1,25 @@
-import { setRandom } from "./links.js";
+import { setRandom, setByName } from "./links.js";
 
 
-function viewLoad(data) {
+var parameters = new URLSearchParams(window.location.search);
+const pokeName = parameters.get('data');
 
+console.log(pokeName);
+window.onload = function () {
+  if (pokeName === null) {
+    viewRandom();
+  } else {
+    viewLoad(pokeName);
+  }
+
+
+
+}
+
+async function viewLoad(name) {
+  var data = await setByName(name)
+
+  setPage(data);
   //location = "../Pages/View_Pokemon.html";
 
 }
@@ -15,14 +32,22 @@ async function viewRandom() {
 }
 
 function setPage(data) {
-  console.log(data);
-  document.getElementById("pic").src = `<img src=${data.sprite}></img>`;
-  document.getElementById("pokeId").innerHTML = data.id;
-  document.getElementById("name").innerHTML = data.name;
-  document.getElementById("baseXP").innerHTML = data.baseXP;
-  document.getElementById("height").innerHTML = data.height;
-  document.getElementById("weight").innerHTML = data.weight;
-  document.getElementById("moves").innerHTML = data.moves;
+  //console.log(data);
+  document.getElementById("pic").innerHTML = `<img src=${data.sprite} height="368px" width="368px" ></img>`;
+  document.getElementById("pokeId").innerHTML = `ID: ${data.id}`;
+  document.getElementById("name").innerHTML = `Name: ${data.name}`;
+  document.getElementById("baseXP").innerHTML = `Base XP: ${data.baseXP}`;
+  document.getElementById("height").innerHTML = `Height: ${data.height}`;
+  document.getElementById("weight").innerHTML = `Weight: ${data.weight}`;
+  var moveList = document.createElement("ul");
+  data.moves.forEach((elem) => {
+    //document.getElementById("moves").innerHTML.append = elem.move.name;
+    var moveItem = document.createElement("li");
+    moveItem.innerText += elem.move.name;
+    moveList.appendChild(moveItem);
+  })
+  document.getElementById("moves").appendChild(moveList);
+  //  document.getElementById("moves").innerHTML = data.moves;
 }
 
 export { viewLoad, viewRandom };

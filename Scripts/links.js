@@ -50,6 +50,13 @@ async function setRandom() {
   return randomPokemon;
 }
 
+async function setByName(name) {
+  let data = await getByName(name);
+  let namedPokemon = new pokeClass(data);
+  return namedPokemon;
+}
+
+
 async function getLegend() {
 
   var legendArray = [['Mewtwo', 'Lugia', "Ho-Oh", "Kyogre", "Groudon", "Rayquaza",
@@ -71,11 +78,13 @@ async function getMythic() {
 }
 
 function viewPage(dataToPass) {
-  //window.location = "../Pages/View_Pokemon.html";
+  //window.location.href = `../Pages/View_Pokemon.html?data=${data}`;
   if (dataToPass === null) {
-    document.location.href = "View_Pokemon.html";
-    viewRandom();
+    window.location.href = `../Pages/View_Pokemon.html`
+    //document.location.href = "View_Pokemon.html";
+    //viewRandom();
   } else {
+    window.location.href = `../Pages/View_Pokemon.html?data=${dataToPass}`;
     viewLoad(dataToPass);
 
   }
@@ -84,4 +93,4 @@ function viewPage(dataToPass) {
 }
 
 
-export { getStart, setRandom, getLegend, getMythic };
+export { getStart, setRandom, getLegend, getMythic, viewPage, setByName };

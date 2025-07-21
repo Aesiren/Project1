@@ -1,7 +1,15 @@
-import { getStart, setRandom, getLegend, getMythic } from "./links.js";
+import { getStart, setRandom, getLegend, getMythic, viewPage } from "./links.js";
 //import { pokeClass } from "./pokeClass.js";
 
+var gridTracker = document.querySelectorAll(".grid");
 
+gridTracker.forEach((grid, index) => {
+  grid.addEventListener("click", () => {
+    var captured = grid.textContent;
+    //console.log(captured);
+    viewPage(captured);
+  })
+})
 window.onload = function () {
   onLoad(null);
   console.log("Page loaded");

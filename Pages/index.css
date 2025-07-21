@@ -54,6 +54,15 @@ h2 {
   align-content: center;
 }
 
+.view_main {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background-color: #ffedeb;
+  border: 2px;
+  border-style: groove;
+  border-color: black;
+}
+
 .match_body {
   display: grid;
   grid-template-columns: 100%;
@@ -106,6 +115,13 @@ button {
   align-self: center;
   height: 100px;
   width: 100px;
+}
+
+#view_text {
+  display: flex;
+  flex-flow: column;
+  justify-items: center;
+
 }
 
 body {
