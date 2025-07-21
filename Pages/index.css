@@ -54,6 +54,17 @@ h2 {
   align-content: center;
 }
 
+.Starter {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #ffedeb;
+  border: 2px;
+  border-style: groove;
+  border-color: black;
+
+
+}
+
 .view_main {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -86,6 +97,18 @@ h2 {
   height: 200px;
   width: 200px;
 
+}
+
+.gridstart {
+  border: 3px;
+  border-style: inset;
+  border-color: #372fc0;
+  justify-self: center;
+  align-self: center;
+  align-content: center;
+  height: 200px;
+  width: 200px;
+  grid-row-start: 2;
 }
 
 button {
@@ -122,6 +145,30 @@ button {
   flex-flow: column;
   justify-items: center;
 
+}
+
+.generation {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-template-rows: 33%;
+  border: 2px;
+  border-style: groove;
+  border-color: black;
+  justify-content: center;
+  align-content: center;
+  justify-self: center;
+  align-self: center;
+}
+
+#gen1 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.txt {
+
+  column-span: all;
+  column-width: 500px;
 }
 
 body {

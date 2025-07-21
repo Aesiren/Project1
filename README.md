@@ -6,24 +6,27 @@ Project 1 for SDI 31
 # User Manual:
 
 # Project Status:
-[] Main Page
-[] Random Page
-[] Guessing Game
-[] Match Game
-[] API Calls
-[] Javascript Implementation
-[] Classes
+[X] Main Page
+[X] Random Page
+[X] Guessing Game
+[X] Match Game
+[X] API Calls
+[X] Javascript Implementation
+[X] Classes
+[] Starter Page
+[] Legendary Page
+[] Mythic Page
 
 # Required Items:
-[] Static Webpage
-[] Layout with HTML and CSS
-[] Fetch requests to API
-[] Interactivity using OOP Javascript
+[X] Static Webpage
+[X] Layout with HTML and CSS
+[X] Fetch requests to API
+[X] Interactivity using OOP Javascript
 
 # Bonus Items:
-[] Utilize classes that use private properties when applicable
-[] Utilize Postman to test APIs
-[] Expand functionality of your page to provide additional details/games/supporting content
+[X] Utilize classes that use private properties when applicable
+[X] Utilize Postman to test APIs
+[X] Expand functionality of your page to provide additional details/games/supporting content
 [] Implement a Loading Spinner for slow API calls
 
 # Stretch Goals:
