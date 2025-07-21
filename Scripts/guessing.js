@@ -21,12 +21,7 @@ guessButton.addEventListener("click", () => {
   console.log("guess button clicked");
   GetGuess();
   CheckGuess(enteredAnswer, currentPokeName);
-  // var restTime = new TimeKeeper(5);
-  // console.log(restTime);
-  // restTime.startTimer();
   Timer(5);
-  // setTimeout(ResetGame, 5000);
-
 })
 
 function NewGame() {
@@ -40,11 +35,6 @@ function NewGame() {
 
 function ResetGame() {
   console.log("resetting page...");
-
-  // var restTime = new TimeKeeper(5);
-  // console.log(restTime);
-  // restTime.startTimer();
-
   NewGame();
 
 }
@@ -53,8 +43,6 @@ function ResetGame() {
 async function GetRandom() {
 
   pokeList = await setRandom();
-  //console.log(pokeList);
-  //setTimeout(ApplyRandom, 1000);
   ApplyRandom();
 
 }
@@ -69,14 +57,11 @@ function ApplyRandom() {
   document.querySelector("#currentID").innerHTML = currentPokeID;
   document.querySelector("#currentName").innerHTML = "??";
   document.querySelector("#currentPic").src = pokePicture;
-  //console.log("got random: ", currentPokeID, currentPokeName);
-  //return random;
 }
 
 function GetGuess() {
 
   enteredAnswer = document.querySelector("#guess").value;
-  //return guess;
   console.log("getting guess: ", enteredAnswer);
 }
 
@@ -104,8 +89,6 @@ function AddScore() {
   console.log("adding to score");
   playerScore += 1;
   document.querySelector("#playerScore").innerHTML = playerScore;
-
-  //return score;
 }
 
 function Congrats() {

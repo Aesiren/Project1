@@ -12,7 +12,7 @@ var guess2 = false;
 var index2;
 var score;
 var internalID;
-//console.log(boxes);
+
 
 newButton.addEventListener("click", () => {
   newGame();
