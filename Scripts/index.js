@@ -27,6 +27,6 @@ async function onLoad(data) {
 
 function setPage(data) {
   for (let x = 0; x < 9; x++) {
-    document.getElementById(`box${x}`).innerHTML = `<img src="${data[x].sprite}" height="192px" width="192px">${data[x].name}</img>`
+    document.getElementById(`box${x}`).innerHTML = `${data[x].name}<br><img src="${data[x].sprite}" height="192px" width="192px"></img>`
   }
 }

@@ -44,8 +44,8 @@ h2 {
 
 .main {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  grid-template-rows: 30% 30% 30%;
+  grid-template-columns: 32% 32% 32%;
+  grid-template-rows: 33% 33% 33%;
   background-color: #ffedeb;
   border: 2px;
   border-style: groove;
@@ -54,7 +54,7 @@ h2 {
   align-content: center;
 }
 
-.body {
+.match_body {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 10% 90%;
@@ -73,6 +73,9 @@ h2 {
   border-color: #372fc0;
   justify-self: center;
   align-self: center;
+  align-content: center;
+  height: 200px;
+  width: 200px;
 
 }
 
@@ -103,4 +106,9 @@ button {
   align-self: center;
   height: 100px;
   width: 100px;
+}
+
+body {
+  background-image: url("../images/pokeball.jpg");
+  background-repeat: repeat;
 }
