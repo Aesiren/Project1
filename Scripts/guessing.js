@@ -37,6 +37,7 @@ function NewGame() {
 
 function ResetGame() {
   console.log("resetting page...");
+
   NewGame();
 
 }
@@ -104,10 +105,11 @@ function TooBad() {
 
 
 function Timer(timer) {
-
+  toggleLoader();
   var intervalID = setInterval(function () {
     if (timer === 0) {
       clearInterval(intervalID);
+      toggleLoader();
       ResetGame();
     } else {
       timer -= 1;
@@ -128,4 +130,13 @@ function toggleContent() {
 
   var content = document.getElementById("currentPic");
   content.classList.toggle("hidden");
+}
+
+function toggleLoader() {
+  var loader = document.getElementById("loader");
+  if (loader.style.display === "none") {
+    loader.style.display = "block"
+  } else {
+    loader.style.display = "none"
+  }
 }

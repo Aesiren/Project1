@@ -134,7 +134,7 @@ function setGuess(index) {
       addScore()
     } else {
       //resetGuess();
-      Timer(1);
+      Timer(.5);
       //reset(index1, index2);
     }
   }
@@ -192,10 +192,10 @@ function Timer(time) {
       reset();
       document.querySelector("#timer").innerHTML = `Match!`
     } else {
-      time -= 1;
+      time -= .5;
       document.querySelector("#timer").innerHTML = `Next Guess in ${time} seconds`;
     }
-  }, 1000)
+  }, 500)
 }
 
 function winGame() {
@@ -226,3 +226,4 @@ function toggleContent() {
   content.classList.toggle("hidden");
   console.log("loaded")
 }
+

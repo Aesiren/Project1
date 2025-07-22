@@ -39,14 +39,14 @@ function setPage(data) {
   document.getElementById("baseXP").innerHTML = `Base XP: ${data.baseXP}`;
   document.getElementById("height").innerHTML = `Height: ${data.height}`;
   document.getElementById("weight").innerHTML = `Weight: ${data.weight}`;
-  var moveList = document.createElement("ul");
-  data.moves.forEach((elem) => {
+  var statList = document.createElement("ul");
+  data.stats.forEach((elem) => {
     //document.getElementById("moves").innerHTML.append = elem.move.name;
-    var moveItem = document.createElement("li");
-    moveItem.innerText += elem.move.name;
-    moveList.appendChild(moveItem);
+    var statItem = document.createElement("li");
+    statItem.innerText += elem.stat.name + " - " + elem.base_stat;
+    statList.appendChild(statItem);
   })
-  document.getElementById("moves").appendChild(moveList);
+  document.getElementById("moves").appendChild(statList);
   //  document.getElementById("moves").innerHTML = data.moves;
   showContent();
 }

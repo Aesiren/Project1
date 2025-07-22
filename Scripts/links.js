@@ -1,4 +1,4 @@
-import { getRandom, getByName, getAll } from "./apiCall.js";
+import { getRandom, getByName, getById } from "./apiCall.js";
 import { pokeClass } from "./pokeClass.js";
 import { viewLoad, viewRandom } from "./view.js";
 

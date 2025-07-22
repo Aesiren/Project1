@@ -28,12 +28,4 @@ async function getByName(name) {
   return data;
 }
 
-async function getAll(min, max) {
-  //fetches all pokemon
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/`);
-  const data = await res.json();
-  return data;
-
-}
-
-export { getRandom, getById, getByName, getAll };
+export { getRandom, getById, getByName };

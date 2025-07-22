@@ -27,6 +27,7 @@ async function onLoad() {
     var data = await setByName(legendArray[x]);
     document.getElementById(`box${x}`).innerHTML = `${data.name}<br><img src="${data.sprite}" height="192px" width="192px"></img>`
   }
+
   showContent();
 
 }
