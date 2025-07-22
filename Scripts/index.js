@@ -3,6 +3,17 @@ import { setRandom, viewPage } from "./links.js";
 
 var gridTracker = document.querySelectorAll(".grid");
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   setTimeout(() => {
+//     hideLoader();
+//     showContent();
+//   }, 3000)
+
+
+// });
+
+
+
 gridTracker.forEach((grid, index) => {
   grid.addEventListener("click", () => {
     var captured = grid.textContent;
@@ -38,4 +49,16 @@ function setPage(data) {
   for (let x = 0; x < 9; x++) {
     document.getElementById(`box${x}`).innerHTML = `${data[x].name}<br><img src="${data[x].sprite}" height="192px" width="192px"></img>`
   }
+  showContent();
+
+}
+
+
+function showContent() {
+  var loader = document.getElementById("loader");
+  loader.style.display = "none";
+  var content = document.getElementById("main");
+  content.classList.remove("hidden");
+  content.classList.add("main");
+  console.log("loaded")
 }

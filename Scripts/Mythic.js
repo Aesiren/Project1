@@ -28,7 +28,17 @@ async function onLoad() {
     var data = await setByName(mythicArray[x]);
     document.getElementById(`box${x}`).innerHTML = `${data.name}<br><img src="${data.sprite}" height="192px" width="192px"></img>`
   }
-
+  showContent();
 }
+
+
+function showContent() {
+  var loader = document.getElementById("loader");
+  loader.style.display = "none";
+  var content = document.getElementById("special_main");
+  content.classList.remove("hidden");
+  console.log("loaded")
+}
+
 
 

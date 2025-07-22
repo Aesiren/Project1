@@ -12,6 +12,8 @@ var pokePageName = document.querySelector("#currentName");
 var pokePicture;
 
 window.onload = function () {
+  var loader = document.getElementById("loader");
+  loader.style.display = "none";
   NewGame();
   console.log("Page loaded");
 };
@@ -21,7 +23,7 @@ guessButton.addEventListener("click", () => {
   console.log("guess button clicked");
   GetGuess();
   CheckGuess(enteredAnswer, currentPokeName);
-  Timer(5);
+  Timer(3);
 })
 
 function NewGame() {
@@ -41,7 +43,7 @@ function ResetGame() {
 
 
 async function GetRandom() {
-
+  toggleContent();
   pokeList = await setRandom();
   ApplyRandom();
 
@@ -57,6 +59,7 @@ function ApplyRandom() {
   document.querySelector("#currentID").innerHTML = currentPokeID;
   document.querySelector("#currentName").innerHTML = "??";
   document.querySelector("#currentPic").src = pokePicture;
+  toggleContent();
 }
 
 function GetGuess() {
@@ -111,4 +114,18 @@ function Timer(timer) {
       document.querySelector("#timer").innerHTML = `New Game In: ${timer}`;
     }
   }, 1000)
+}
+
+
+function toggleContent() {
+  var loader = document.getElementById("loader");
+  if (loader.style.display === "none") {
+    loader.style.display = "block"
+  } else {
+    loader.style.display = "none"
+  }
+  //loader.classList.toggle("hidden");
+
+  var content = document.getElementById("currentPic");
+  content.classList.toggle("hidden");
 }

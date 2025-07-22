@@ -3,6 +3,7 @@
 
 <head>
   <link href="./index.css" rel="stylesheet">
+
   <meta charset="UTF-8" />
   <title>title</title>
   <div class="header">
@@ -12,7 +13,7 @@
     <span>
       <button id="home" type="button" onclick="location.href='index.html'">Home</button>
       <button id="guessing" type="button" onclick="location.href='Guessing_Game.html'">Guessing Game</button>
-      <button is="match" type="button" onclick="location.href='Match_Game.html'">Match Game</button>
+      <button id="btnmatch" type="button" onclick="location.href='Match_Game.html'">Match Game</button>
     </span>
 
   </div>
@@ -32,7 +33,8 @@
 
     </div>
 
-    <div class="main">
+    <div id="loader" class="loader"></div>
+    <div id="main" class="hidden">
 
       <div class="playerInfo">
         <label>Score:</label>

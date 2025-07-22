@@ -26,6 +26,7 @@ boxes.forEach((box, index) => {
 
 async function newGame() {
   //get random pokemon, set to deck array
+  toggleContent();
   getDeck();
   setCards();
   score = 0;
@@ -108,6 +109,7 @@ function setCards() {
   for (let x = 0; x < 12; x++) {
     document.getElementById(x).innerHTML = `<img src='../images/question.jpg'></img>`
   }
+  toggleContent();
 
 }
 
@@ -175,6 +177,7 @@ function resetIndex() {
   index1 = undefined;
   index2 = undefined;
 }
+
 function resetGuess() {
 
   guess1 = false;
@@ -214,4 +217,12 @@ function timeStart() {
 
 function timeEnd() {
   clearInterval(internalID);
+}
+
+function toggleContent() {
+  var loader = document.getElementById("loader");
+  loader.classList.toggle("hidden");
+  var content = document.getElementById("match_main");
+  content.classList.toggle("hidden");
+  console.log("loaded")
 }

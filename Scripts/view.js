@@ -48,6 +48,16 @@ function setPage(data) {
   })
   document.getElementById("moves").appendChild(moveList);
   //  document.getElementById("moves").innerHTML = data.moves;
+  showContent();
+}
+
+
+function showContent() {
+  var loader = document.getElementById("loader");
+  loader.style.display = "none";
+  var content = document.getElementById("view_main");
+  content.classList.remove("hidden");
+  console.log("loaded")
 }
 
 export { viewLoad, viewRandom };

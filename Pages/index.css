@@ -42,7 +42,7 @@ h2 {
 
 }
 
-.main {
+#main {
   display: grid;
   grid-template-columns: 32% 32% 32%;
   grid-template-rows: 33% 33% 33%;
@@ -54,7 +54,7 @@ h2 {
   align-content: center;
 }
 
-.special_main {
+#special_main {
   display: grid;
   grid-template-columns: 32% 32% 32%;
   background-color: #ffedeb;
@@ -65,18 +65,16 @@ h2 {
   align-content: center;
 }
 
-.Starter {
+#Starter {
   display: grid;
   grid-template-columns: 1fr;
   background-color: #ffedeb;
   border: 2px;
   border-style: groove;
   border-color: black;
-
-
 }
 
-.view_main {
+#view_main {
   display: grid;
   grid-template-columns: 40% 60%;
   background-color: #ffedeb;
@@ -85,7 +83,7 @@ h2 {
   border-color: black;
 }
 
-.match_body {
+#match_body {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 10% 90%;
@@ -110,7 +108,7 @@ h2 {
 
 }
 
-.gridstart {
+#gridstart {
   border: 3px;
   border-style: inset;
   border-color: #372fc0;
@@ -131,11 +129,10 @@ button {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.match_main {
+#match_main {
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
   grid-template-rows: 20% 20% 20%;
-
   justify-content: center;
   align-content: center;
 
@@ -185,4 +182,31 @@ button {
 body {
   background-image: url("../images/pokeball.jpg");
   background-repeat: repeat;
+}
+
+
+.loader {
+  border: 4px solid rgb(255, 255, 255);
+  border-top: 4px solid #ff0000;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
 }
