@@ -43,7 +43,7 @@ Match Game: A random selection of 6 Pokemon is made and distributed among a 12 t
 [X] Utilize classes that use private properties when applicable
 [X] Utilize Postman to test APIs
 [X] Expand functionality of your page to provide additional details/games/supporting content
-[] Implement a Loading Spinner for slow API calls
+[X] Implement a Loading Spinner for slow API calls
 
 # Stretch Goals:
 [] Write a unit test for your existing functions so that you can test edge cases
